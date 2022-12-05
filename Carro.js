@@ -45,3 +45,26 @@ class Carro {
     carro3.andar()
     console.log(carro4.velocidade)
     console.log(carro3.velocidade)
+
+    class CarroQuebrado extends Carro{
+        andar(){
+            console.log("carro quebrado")
+        }
+    }
+    class CarroDeCorrida extends Carro{
+        andar(){
+            if(!this.ligado){
+                this.ligar()
+            }
+            this.velocidade = 120
+        }
+    }
+
+    let carro5 = new CarroQuebrado()
+    carro5.andar()
+    console.log(carro5.velocidade)
+    let carro6 = new CarroDeCorrida()
+    carro6.andar()
+    console.log(carro6.velocidade)
+
+    

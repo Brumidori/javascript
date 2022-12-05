@@ -1,4 +1,4 @@
-class Bike {
+class Veiculo {
     velocidade = 0
     ligado = false
 
@@ -17,4 +17,4 @@ class Bike {
     }
 }
 
-export {Bike}
+export {Veiculo as Bike}

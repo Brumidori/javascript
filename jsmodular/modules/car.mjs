@@ -1,4 +1,4 @@
-class Car {
+class Veiculo {
     velocidade = 0
     ligado = false
     nivelCombustivel = 100
@@ -33,7 +33,7 @@ function calculaIdade(){}
 
 const bla = "bla"
 
-export default Car; //podemos definir a exportacao obrigatoria
+export default Veiculo; //podemos definir a exportacao obrigatoria
 export {CarComAr, calculaIdade, bla} //eh possivel exportar mais de uma coisa
 
     

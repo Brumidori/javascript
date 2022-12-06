@@ -1,5 +1,7 @@
  /*config do projeto - instalacao npm highlight.js, express, webpack,yarn
 */
+//o certo eh nao deixar modules no repositorio - pois vai instalar tudo para quem for usar. Apenas o json
+// o lock.jason registra as alteracoes no module - controla a versao dos pacotes (evita reinstalar pacotes e verifica atualizacao)
 //instalacao npm moment(trabalha com horas)
 
 import moment from 'moment';

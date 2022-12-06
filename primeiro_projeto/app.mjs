@@ -5,6 +5,9 @@
 //npx executa pacotes do node sem precisar instalar
 //yarn gerenciador de pacote criado pelo Facebook
 //substituir lock.json pelo yarn para nao dar conflito
+//yarn add instala e @^ define versao
+// para baixar yarn devdependencie usar --dev (so eh possivel no mesmo pacote)
+//yarn remove desinstala
 
 import moment from 'moment';
 

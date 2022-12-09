@@ -13,7 +13,7 @@ let pedido3 = {
 const cozinha = (pedido, callback) =>
     setTimeout(() => {
         console.log(pedido['nome'] + '  pronto')
-        callback(pedido['nome'])
+        callback(pedido['nome'] + " para o cliente")
     }, pedido['tempo']);
 
 
@@ -33,7 +33,7 @@ const janta = () => {
                             garcon("pedido 3 para a cozinha", () =>
                                 cozinha(pedido3, (retorno3) =>
                                     garcon(retorno3, () => {
-                                        console.log("encderra pedidos")
+                                        console.log("encerra pedidos")
                                         console.log("paga contas")
                                     })
                                 )

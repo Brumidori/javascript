@@ -24,21 +24,25 @@ const cozinha = (pedido) => new Promise((resolve, reject) => {
     }, pedido['tempo']);
 })
 
-const janta = () => {
+const janta = async() => {
     console.log('iniciando pedidos')
-    cozinha(pedido1).then (
-        (retorno)=>{
-            console.log(retorno)
-            console.log('comer')
-        }).then(() => cozinha(pedido2)
-        ).then(() => (cozinha(pedido3))
-        ).catch (retorno => {
+    try{
+        let retorno = await cozinha(pedido1)
+        console.log(retorno)
+        console.log('comer')
+        await cozinha(pedido2)
+        await cozinha(pedido3)
+    }catch (retorno) {
             console.log(retorno)
             console.log("mudar pedido ")
-        }). finally ( //o que qr fazer independente de erro ou nao
-            () => console.log("pedir conta")
-        )
-    
+    } 
+    return "pedir conta";
 }
 
-janta()
+const funcaoSincrona = () => {
+    let resultado = janta()
+        return resultado
+}
+
+funcaoSincrona().then((resultado)=> console.log(resultado)) // esperando o resultado de janta q é async
+//toda funcao async resulta em promisse
